@@ -4,20 +4,17 @@ import { BlurFade } from "@/components/ui/blur-fade"
 import { TextAnimate } from "@/components/ui/text-animate"
 import { useEffect } from "react"
 
-// Replace this with your Typeform URL
-const TYPEFORM_URL = "YOUR_TYPEFORM_URL_HERE"
-
 export function FeedbackSection() {
   useEffect(() => {
     // Load Typeform embed script
     const script = document.createElement("script")
-    script.src = "https://embed.typeform.com/next/embed.js"
+    script.src = "//embed.typeform.com/next/embed.js"
     script.async = true
     document.body.appendChild(script)
 
     return () => {
       // Cleanup
-      const existingScript = document.querySelector('script[src="https://embed.typeform.com/next/embed.js"]')
+      const existingScript = document.querySelector('script[src="//embed.typeform.com/next/embed.js"]')
       if (existingScript && existingScript.parentNode) {
         existingScript.parentNode.removeChild(existingScript)
       }
@@ -49,11 +46,7 @@ export function FeedbackSection() {
 
         <BlurFade delay={0.4} direction="up" className="mt-12">
           <div
-            data-tf-widget={TYPEFORM_URL}
-            data-tf-opacity="100"
-            data-tf-iframe-props="title=Feedback Form"
-            data-tf-transitive-search-params
-            data-tf-medium="snippet"
+            data-tf-live="01KFKK6456XV5084F5127AZGQ0"
             style={{ width: "100%", height: "600px" }}
             className="rounded-lg overflow-hidden"
           />
