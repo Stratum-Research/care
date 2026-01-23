@@ -18,6 +18,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Care - Volunteer Run | Grassroots | NYC",
   description: "Local first and volunteer run in NYC",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
